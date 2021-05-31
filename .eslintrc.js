@@ -2,6 +2,7 @@ module.exports = {
   env: {
     es2020: true,
     node: true,
+    jest: true
   },
   extends: [
     'airbnb-base',
@@ -30,6 +31,18 @@ module.exports = {
     'no-param-reassign': 'off',
     camelcase: 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      }
+    ],
+    'no-useless-constructor': 'off'
   },
   settings: {
     'import/resolver': {
